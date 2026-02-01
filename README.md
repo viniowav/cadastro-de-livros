@@ -1,2 +1,3 @@
-# cadastro-de-livros
-Um cadastro simples de livros em PHP.
+# Cadastro simples de livros
+
+Um cadastro simples de livros feito em PHP.
