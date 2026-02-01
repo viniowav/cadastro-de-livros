@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Jetbrains Mono;
+}
+
+body {
+    background: #141414;
+    padding: 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 24px;
+}
+
+.navbar {
+    margin-bottom: 24px;
+}
+
+.nav {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px 16px;
+    margin-bottom: 32px;
+    align-items: center;
+}
+
+.form label {
+    font-weight: bold;
+    color: #444;
+}
+
+.form input {
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form button {
+    grid-column: span 2;
+    padding: 10px;
+    background: #2d6cdf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: #1f55b6;
+}
+
+.table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #2d6cdf;
+    color: white;
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background: #f1f3f6;
+}
+
+td a {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td button {
+    margin-right: 8px;
+    padding: 6px 10px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #f0ad4e;
+    color: #fff;
+}
+
+td button:hover {
+    background: #ec971f;
+}
