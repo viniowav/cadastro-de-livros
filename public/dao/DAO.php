@@ -40,7 +40,6 @@ class DAO {
     $this->saveJson($books);
 }
 
-
     public function delete(int $id): void {
         $books = $this->read();
 

@@ -13,8 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (isset($_GET['delete'])) {
     $controller->delete((int) $_GET['delete']);
-    header("Location: index.php");
-    exit;
+}
+
+if (isset($_POST['insert'])) {
+    $controller->store($_POST);
 }
 ?>
 
@@ -77,7 +79,7 @@ if (isset($_GET['delete'])) {
                     <td><?=$book['author']?></td>
                     <td><?=$book['year']?></td>
                     <td>
-                        <a href="index.php?delete=<?= $book['id'] ?>">Excluir</a>
+                        <a href="index.php?delete=<?= $book["id"] ?>">Excluir</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
