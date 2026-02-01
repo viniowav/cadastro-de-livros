@@ -6,14 +6,14 @@
 }
 
 body {
-    background: #141414;
+    background: #0f0f0f;
     padding: 40px;
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-    background: #ffffff;
+    background: #202020;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 24px;
@@ -24,36 +24,34 @@ body {
 }
 
 .nav {
+    
     font-size: 22px;
     font-weight: bold;
-    color: #333;
+    color: #f8f8f8;
     text-decoration: none;
 }
 
 .form {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 12px 16px;
     margin-bottom: 32px;
     align-items: center;
 }
 
 .form label {
     font-weight: bold;
-    color: #444;
+    color: #f8f8f8;
 }
 
 .form input {
+    display: grid;
     padding: 8px 10px;
     border-radius: 4px;
-    border: 1px solid #ccc;
     font-size: 14px;
 }
 
 .form button {
     grid-column: span 2;
     padding: 10px;
-    background: #2d6cdf;
+    background: #337418;
     color: white;
     border: none;
     border-radius: 4px;
@@ -62,7 +60,7 @@ body {
 }
 
 .form button:hover {
-    background: #1f55b6;
+    background: #5dd62c;
 }
 
 .table {
@@ -75,18 +73,17 @@ table {
 }
 
 thead {
-    background: #2d6cdf;
+    background: #337418;
     color: white;
 }
 
 th, td {
     padding: 10px 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-tbody tr:hover {
-    background: #f1f3f6;
+tbody tr{
+    color: #f8f8f8;
 }
 
 td a {
