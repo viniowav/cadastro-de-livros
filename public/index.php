@@ -47,55 +47,55 @@ if (isset($_POST['update'])) {
             </div>
         </div>
 
-<form action="index.php" method="post">
-    <div class="form">
-        <label>ID</label>
-        <input type="number" name="id" required><br>
+    <form action="index.php" method="post">
+        <div class="form">
+            <label>ID</label>
+            <input type="number" name="id" required><br>
 
-        <label>Título</label>
-        <input type="text" name="title" required><br>
+            <label>Título</label>
+            <input type="text" name="title" required><br>
 
-        <label>Autor</label>
-        <input type="text" name="author" required><br>
+            <label>Autor</label>
+            <input type="text" name="author" required><br>
 
-        <label>Ano de publicação</label>
-        <input type="number" name="year" required><br>
+            <label>Ano de publicação</label>
+            <input type="number" name="year" required><br>
 
-        <button type="submit">Cadastrar</button>
-    </div>
-</form>
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
 
-<div class="table">
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Ano</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($dao->read() as $book): ?>
+    <div class="table">
+        <table>
+            <thead>
                 <tr>
-                    <td><?=$book['id']?></td>
-                    <td><?=$book['title']?></td>
-                    <td><?=$book['author']?></td>
-                    <td><?=$book['year']?></td>
-                    <td>
-                        <span class="delete-btn">
-                            <a href="index.php?delete=<?= $book["id"] ?>">Excluir</a>
-                        </span>
-
-                        <span class="edit-btn">
-                            <a href="update.php?id=<?= $book["id"] ?>">Editar</a>
-                        </span>
-                    </td>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Ano</th>
+                    <th>Ações</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                <?php foreach ($dao->read() as $book): ?>
+                    <tr>
+                        <td><?=$book['id']?></td>
+                        <td><?=$book['title']?></td>
+                        <td><?=$book['author']?></td>
+                        <td><?=$book['year']?></td>
+                        <td>
+                            <span class="delete-btn">
+                                <a href="index.php?delete=<?= $book["id"] ?>">Excluir</a>
+                            </span>
+
+                            <span class="edit-btn">
+                                <a href="update.php?id=<?= $book["id"] ?>">Editar</a>
+                            </span>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

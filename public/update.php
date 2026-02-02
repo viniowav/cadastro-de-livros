@@ -43,23 +43,31 @@ if (!$bookToEdit) {
 <head>
     <meta charset="UTF-8">
     <title>Editar livro</title>
+    <link rel="stylesheet" href="update/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <form action="update.php" method="post">
+        <div class="form">
+            <input type="hidden" name="id" value="<?= $bookToEdit['id'] ?>">
 
-<form action="update.php" method="post">
-    <input type="hidden" name="id" value="<?= $bookToEdit['id'] ?>">
+            <label>Título</label>
+            <input type="text" name="title" value="<?= $bookToEdit['title'] ?>" required><br>
 
-    <label>Título</label>
-    <input type="text" name="title" value="<?= $bookToEdit['title'] ?>" required><br>
+            <label>Autor</label>
+            <input type="text" name="author" value="<?= $bookToEdit['author'] ?>" required><br>
 
-    <label>Autor</label>
-    <input type="text" name="author" value="<?= $bookToEdit['author'] ?>" required><br>
+            <label>Ano</label>
+            <input type="number" name="year" value="<?= $bookToEdit['year'] ?>" required><br>
 
-    <label>Ano</label>
-    <input type="number" name="year" value="<?= $bookToEdit['year'] ?>" required><br>
+            <button type="submit">Atualizar</button>
+        </div>
+        </form>
+    </div>
 
-    <button type="submit">Atualizar</button>
-</form>
-
+    
 </body>
 </html>
