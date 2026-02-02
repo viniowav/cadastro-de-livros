@@ -86,8 +86,14 @@ tbody tr{
     color: #f8f8f8;
 }
 
-td a {
+.delete-btn a {
     color: #d9534f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-btn a {
+    color: #ec971f;
     text-decoration: none;
     font-weight: bold;
 }

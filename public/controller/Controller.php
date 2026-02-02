@@ -22,6 +22,16 @@ class Controller {
     public function delete(int $id): void {
         $this->dao->delete($id);
     }
+
+    public function update(array $data) {
+    $this->dao->update(
+        $data['id'],
+        $data['title'],
+        $data['author'],
+        $data['year']
+    );
+}
+
 }
 
 ?>

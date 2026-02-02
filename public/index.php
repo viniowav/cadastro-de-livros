@@ -11,12 +11,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
+// Não sei pq isso ta AQUI mas funciona
 if (isset($_GET['delete'])) {
     $controller->delete((int) $_GET['delete']);
 }
 
 if (isset($_POST['insert'])) {
     $controller->store($_POST);
+}
+
+if (isset($_POST['update'])) {
+    $controller->update((array) $_GET['update']);
 }
 ?>
 
@@ -79,14 +84,18 @@ if (isset($_POST['insert'])) {
                     <td><?=$book['author']?></td>
                     <td><?=$book['year']?></td>
                     <td>
-                        <a href="index.php?delete=<?= $book["id"] ?>">Excluir</a>
+                        <span class="delete-btn">
+                            <a href="index.php?delete=<?= $book["id"] ?>">Excluir</a>
+                        </span>
+
+                        <span class="edit-btn">
+                            <a href="update.php?id=<?= $book["id"] ?>">Editar</a>
+                        </span>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 </div>
-
-
 </body>
 </html>
