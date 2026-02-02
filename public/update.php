@@ -1,7 +1,6 @@
 <?php
 $path = 'books.json';
 
-/* ===== POST: salvar update ===== */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $books = json_decode(file_get_contents($path), true);
 
@@ -19,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
-/* ===== GET: carregar livro ===== */
 if (!isset($_GET['id'])) {
     header("Location: index.php");
     exit;
